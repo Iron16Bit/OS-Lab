@@ -1,0 +1,11 @@
+1:  Stampa “T” (per True) o “F” (per False) a seconda che il valore rappresenti un file o cartella esistente
+
+[ -e $DATA ] && echo "T" || echo "F"
+
+2: Stampa “file”, “cartella” o “?” a seconda che il valore rappresenti un file (esistente), una cartella (esistente) o una voce non presente nel file-system
+
+[ -f $DATA ] && echo "file" || ([ -d $DATA ] && echo "directory" || echo "?")
+
+3: Stampa il risultato di una semplice operazione aritmetica (es: ‘1 < 2’) contenuta nel file indicato dal valore di DATA, oppure “?” se il file non esiste
+
+[ -f $DATA ] && echo $(( $( cat $DATA ) )) || echo "?"
