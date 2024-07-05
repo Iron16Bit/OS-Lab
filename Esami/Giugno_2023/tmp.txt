@@ -1,0 +1,2 @@
+queue SALUTO CIAO!
+fifo /tmp/file.fifo fifiamo
